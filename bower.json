@@ -5,8 +5,8 @@
   "authors": [
     "Sava"
   ],
-  "license": "MIT",
-  "homepage": "",
+  "license": "Apache-2.0",
+  "homepage": "https://savikin.me/",
   "ignore": [
     "**/.*",
     "node_modules",

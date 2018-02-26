@@ -1,10 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"/>
+    <link href="http://vjs.zencdn.net/6.2.4/video-js.css" rel="stylesheet"/>
   </head>
   <body>
 
@@ -31,12 +33,53 @@
           <button class="btn btn-default"><i class="fa fa-sign-out fa-lg"></i> Log out</button>
         </form>
       </div>
+
+      <div id="link" class="hidden">
+
+        <form action="" id="linkForm" class="navbar-form navbar-right">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#subsModal">Open Subs Panel</button>
+          <div id="subsModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add your subs here</h4>
+                </div>
+                <div class="modal-body">
+                  <textarea id="subs1" autocomplete="off" rows="1" class="form-control sub-input" placeholder="Enter your link"></textarea><br/>
+                  <textarea id="subs2" autocomplete="off" rows="1" class="form-control sub-input" placeholder="Enter your link"></textarea><br/>
+                  <textarea id="subs3" autocomplete="off" rows="1" class="form-control sub-input" placeholder="Enter your link"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <input id="linkBox" autocomplete="off" class="form-control" placeholder="Enter your link" />
+          <button class="btn btn-default"><i class="fa fa-globe fa-lg"></i> Send link</button>
+        </form>
+      </div>
+
     </nav>
-    <p><video src="anime.mp4" id="video" controls></video></p>
+
+    <p id="videoContainer">
+      <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="1280" height="720"  data-setup="{}">
+        <source src="anime.mp4" type='video/mp4' />
+        <!--poster="MY_VIDEO_POSTER.jpg"-->
+        <!--<track kind='captions' src='https://dotsub.com/media/5d5f008c-b5d5-466f-bb83-2b3cfa997992/c/chi_hans/vtt' srclang='zh' label='Chinese' default />-->
+      </video>
+      <p>This website was made by someone called <a href="https://savikin.me/">Sava</a> and is still in beta, Hi</p>
+    </p>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://vjs.zencdn.net/6.2.4/video.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

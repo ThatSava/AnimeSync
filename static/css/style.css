@@ -4,3 +4,12 @@
 #loginForm,#logoutForm {
   padding-right:30px;
 }
+.sub-input {
+  min-width: 100%;
+}
+.vjs-default-skin.vjs-paused .vjs-big-play-button {
+display: none;
+}
+.vjs-default-skin.vjs-paused .vjs-control-bar {
+display: flex;
+}
